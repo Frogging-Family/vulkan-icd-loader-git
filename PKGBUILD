@@ -87,7 +87,7 @@ build() {
 }
 
 package_vulkan-icd-loader-git() {
-  provides=("vulkan-icd-loader=$pkgver-$pkgrel" "libvulkan.so=$pkgver-$pkgrel")
+  provides=("vulkan-icd-loader=$pkgver-$pkgrel" "libvulkan.so")
   conflicts=('vulkan-icd-loader')
   cd "${srcdir}"/Vulkan-Loader*/build64
 
@@ -98,7 +98,7 @@ package_vulkan-icd-loader-git() {
 }
 
 package_lib32-vulkan-icd-loader-git() {
-  provides=("lib32-vulkan-icd-loader=$pkgver-$pkgrel" "lib32-libvulkan.so=$pkgver-$pkgrel")
+  provides=("lib32-vulkan-icd-loader=$pkgver-$pkgrel" "lib32-libvulkan.so")
   conflicts=('lib32-vulkan-icd-loader')
   cd "${srcdir}"/Vulkan-Loader*/build32
 
