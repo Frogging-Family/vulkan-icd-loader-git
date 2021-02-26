@@ -23,7 +23,7 @@ plain '             `.-:///////:-.`'
 _NUKR="true"
 
 pkgname=('vulkan-icd-loader-git' 'lib32-vulkan-icd-loader-git')
-pkgver=1.2.141.r0.g006586926
+pkgver=1.2.170.r0.gc5678a03d
 pkgrel=1
 arch=(x86_64)
 pkgdesc="Vulkan Installable Client Driver (ICD) Loader"
@@ -87,7 +87,7 @@ build() {
 }
 
 package_vulkan-icd-loader-git() {
-  provides=("vulkan-icd-loader=$pkgver-$pkgrel")
+  provides=("vulkan-icd-loader=$pkgver-$pkgrel" "libvulkan.so=$pkgver-$pkgrel")
   conflicts=('vulkan-icd-loader')
   cd "${srcdir}"/Vulkan-Loader*/build64
 
@@ -98,7 +98,7 @@ package_vulkan-icd-loader-git() {
 }
 
 package_lib32-vulkan-icd-loader-git() {
-  provides=("lib32-vulkan-icd-loader=$pkgver-$pkgrel")
+  provides=("lib32-vulkan-icd-loader=$pkgver-$pkgrel" "lib32-libvulkan.so=$pkgver-$pkgrel")
   conflicts=('lib32-vulkan-icd-loader')
   cd "${srcdir}"/Vulkan-Loader*/build32
 
