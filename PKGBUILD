@@ -23,7 +23,7 @@ plain '             `.-:///////:-.`'
 _NUKR="true"
 
 pkgname=('vulkan-icd-loader-git' 'lib32-vulkan-icd-loader-git')
-pkgver=1.2.170.r0.gc5678a03d
+pkgver=1.3.209.r12.ga59027c96
 pkgrel=1
 arch=(x86_64)
 pkgdesc="Vulkan Installable Client Driver (ICD) Loader"
@@ -82,6 +82,7 @@ build() {
     -DBUILD_WSI_XLIB_SUPPORT=On \
     -DBUILD_WSI_WAYLAND_SUPPORT=On \
     -DCMAKE_BUILD_TYPE=Release \
+    -DENABLE_WERROR=OFF \
     ..
   make
 }
