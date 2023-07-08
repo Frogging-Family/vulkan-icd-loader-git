@@ -23,7 +23,7 @@ plain '             `.-:///////:-.`'
 _NUKR="true"
 
 pkgname=('vulkan-icd-loader-git' 'lib32-vulkan-icd-loader-git')
-pkgver=1.3.209.r12.ga59027c96
+pkgver=1.3.256.r1.g9d38cccf3
 pkgrel=1
 arch=(x86_64)
 pkgdesc="Vulkan Installable Client Driver (ICD) Loader"
@@ -32,7 +32,7 @@ license=('custom')
 makedepends=(cmake python-lxml libx11 libxrandr wayland vulkan-headers git python lib32-libx11 lib32-libxrandr lib32-wayland)
 depends=(glibc)
 optdepends=('vulkan-driver: packaged vulkan driver') # vulkan-driver: vulkan-intel/vulkan-radeon/nvidia-utils/....
-source=("git+https://github.com/KhronosGroup/Vulkan-Loader.git")
+source=("git+https://github.com/KhronosGroup/Vulkan-Loader.git#branch=main")
 sha256sums=('SKIP')
 
 pkgver() {
